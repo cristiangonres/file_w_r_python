@@ -11,6 +11,14 @@ def write_text (texto):
         data.writelines(li+'\n')
     data.close()
 
+def read_text():
+    data = open(file, 'r')
+    data.readline()
+    for li in data:
+        print(li)
+    data.close()
+    
+
 list_dir = os.listdir('./')
 file = input('El nombre del archivo: ')
 file += '.txt'
@@ -28,6 +36,8 @@ if file in list_dir:
 else: 
     print('El archivo no existe, se creará.')
     write_text(texto)
+    
+read_text()
 
 
 
